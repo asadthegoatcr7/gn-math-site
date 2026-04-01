@@ -1,12 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>GN Math Site</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>GN Math - Welcome</title>
+<style>
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --accent-color: #00bcd4;
+    --text-color: #ffffff;
+    --button-color: #00bcd4;
+    --button-hover-color: #0097a7;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    max-width: 600px;
+    text-align: center;
+    animation: slideUp 0.8s ease-in-out;
+}
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.25rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
+}
+h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+p {
+    margin: 0;
+    line-height: 1.5;
+}
+</style>
 </head>
 <body>
-    <h1>Welcome to GN Math Site</h1>
-    <a href="https://gnmath.global.ssl.fastly.net/" target="_blank">
-        <button>Go to GN Math</button>
-    </a>
+<div class="card">
+    <h1>Welcome to GN Math</h1>
+    <p>Experience mathematics like never before. Explore interactive lessons, challenging problems, and more in a beautiful dark-mode interface.</p>
+    <a class="button" href="https://gnmath.global.ssl.fastly.net/">Start Learning</a>
+</div>
 </body>
 </html>
